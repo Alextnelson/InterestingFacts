@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InterestingFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,113 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swK-Yl-rBL">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <string key="text">"You are born with 300 bones; by the time you are an adult you will have 206." "You are born with 300 bones; by the time you are an adult you will have 206.",
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oG9-Oj-V8F">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K7v-Uj-Z9e"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Pbn-F1-D4P"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="oW6-Mx-VBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Another Fact"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="K7v-Uj-Z9e"/>
+                                        <exclude reference="Pbn-F1-D4P"/>
+                                        <exclude reference="oW6-Mx-VBl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="K7v-Uj-Z9e"/>
+                                        <include reference="Pbn-F1-D4P"/>
+                                        <include reference="oW6-Mx-VBl"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showInterestingFact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EZu-ne-02r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mse-Td-VUh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="swK-Yl-rBL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4mW-m8-ksi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oG9-Oj-V8F" secondAttribute="trailing" constant="20" id="5er-SV-0nj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="swK-Yl-rBL" secondAttribute="leading" id="61m-95-BcT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oG9-Oj-V8F" secondAttribute="bottom" constant="80" id="FJi-4T-Z4f"/>
+                            <constraint firstItem="swK-Yl-rBL" firstAttribute="top" secondItem="mse-Td-VUh" secondAttribute="bottom" constant="132" id="SNU-B3-A63">
+                                <variation key="widthClass=compact" constant="120"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="swK-Yl-rBL" secondAttribute="trailing" id="X4D-yf-7lP"/>
+                            <constraint firstItem="mse-Td-VUh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="rVV-1c-AKI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mse-Td-VUh" secondAttribute="leading" id="tFS-Yf-VrX">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="oG9-Oj-V8F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="uLp-Sw-dr3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="swK-Yl-rBL"/>
+                                <exclude reference="oG9-Oj-V8F"/>
+                                <exclude reference="mse-Td-VUh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="rVV-1c-AKI"/>
+                                <exclude reference="tFS-Yf-VrX"/>
+                                <exclude reference="4mW-m8-ksi"/>
+                                <exclude reference="61m-95-BcT"/>
+                                <exclude reference="SNU-B3-A63"/>
+                                <exclude reference="X4D-yf-7lP"/>
+                                <exclude reference="5er-SV-0nj"/>
+                                <exclude reference="uLp-Sw-dr3"/>
+                                <exclude reference="FJi-4T-Z4f"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="swK-Yl-rBL"/>
+                                <include reference="oG9-Oj-V8F"/>
+                                <include reference="mse-Td-VUh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="rVV-1c-AKI"/>
+                                <include reference="tFS-Yf-VrX"/>
+                                <include reference="4mW-m8-ksi"/>
+                                <include reference="61m-95-BcT"/>
+                                <exclude reference="SNU-B3-A63"/>
+                                <include reference="X4D-yf-7lP"/>
+                                <include reference="5er-SV-0nj"/>
+                                <include reference="uLp-Sw-dr3"/>
+                                <include reference="FJi-4T-Z4f"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="interestingFactButton" destination="oG9-Oj-V8F" id="Suw-wj-Xfo"/>
+                        <outlet property="interestingFactLabel" destination="swK-Yl-rBL" id="SUv-f9-rf6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="303" y="355"/>
         </scene>
     </scenes>
 </document>

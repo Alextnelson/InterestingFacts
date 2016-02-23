@@ -10,16 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var interestingFactLabel: UILabel!
+    @IBOutlet weak var interestingFactButton: UIButton!
+    let fact = Fact()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        interestingFactLabel.text = fact.getRandomFact()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func showInterestingFact(sender: UIButton) {
+        let randomColor = Color().getRandomColor()
+        view.backgroundColor = randomColor
+        interestingFactButton.tintColor = randomColor
+        interestingFactLabel.text = fact.getRandomFact()
     }
-
-
 }
-
